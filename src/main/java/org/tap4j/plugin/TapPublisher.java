@@ -228,7 +228,7 @@ public class TapPublisher extends Recorder implements MatrixAggregatable {
 			// the build
 			TapBuildAction action = new TapBuildAction(build, testResult);
 			build.getActions().add(action);
-			if (testResult.hasParseErrors()) {
+			/*if (testResult.hasParseErrors()) {
 				build.setResult(Result.UNSTABLE);
 			}
 			if (testResult.getFailed() > 0) {
@@ -237,7 +237,7 @@ public class TapPublisher extends Recorder implements MatrixAggregatable {
 				} else {
 					build.setResult(Result.UNSTABLE);
 				}
-			}
+			}*/
 		} else {
 			logger.println("Found matching files but did not find any TAP results.");
 			return Boolean.TRUE;
